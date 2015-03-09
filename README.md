@@ -7,6 +7,6 @@ https://twitter.com/AppColorific
 Colorific is a bright and easy-to-play reaction game. 
 Tap the right color on every block and win :-)
 
-Directory:
-  ColorBlocks - XCode project file, plist and all metadata
-  Screenshots - screenshots of the app in action
+<h3>Directory:</h3>
+<br><h5>ColorBlocks</h5> - XCode project file, plist and all metadata
+<br><h5>Screenshots</h5> - screenshots of the app in action
