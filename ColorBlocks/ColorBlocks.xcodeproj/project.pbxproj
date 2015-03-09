@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E73A9B401AA553A700E4A5AB /* ColorBlocksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764C75A1AA550AE005785F1 /* ColorBlocksTests.swift */; };
+		E73AC16B1AA5599900E8CFB6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E73AC1691AA5599900E8CFB6 /* LaunchScreen.xib */; };
+		E73AC16F1AA55A1900E8CFB6 /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E73AC16D1AA55A1900E8CFB6 /* Data.xcdatamodeld */; };
+		E764C7421AA5503C005785F1 /* AlegreyaSansSC-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E764C7291AA5503C005785F1 /* AlegreyaSansSC-Bold.ttf */; };
+		E764C7431AA5503C005785F1 /* AlegreyaSansSC-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E764C72A1AA5503C005785F1 /* AlegreyaSansSC-Light.ttf */; };
+		E764C7441AA5503C005785F1 /* AlegreyaSansSC-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E764C72B1AA5503C005785F1 /* AlegreyaSansSC-Thin.ttf */; };
+		E764C7451AA5503C005785F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764C72C1AA5503C005785F1 /* AppDelegate.swift */; };
+		E764C7481AA5503C005785F1 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764C7321AA5503C005785F1 /* Button.swift */; };
+		E764C7491AA5503C005785F1 /* ColorBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764C7331AA5503C005785F1 /* ColorBlock.swift */; };
+		E764C74A1AA5503C005785F1 /* ColorBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764C7341AA5503C005785F1 /* ColorBoard.swift */; };
+		E764C74C1AA5503C005785F1 /* GameBreakWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764C7361AA5503C005785F1 /* GameBreakWindow.swift */; };
+		E764C74D1AA5503C005785F1 /* GameFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764C7371AA5503C005785F1 /* GameFunctions.swift */; };
+		E764C74E1AA5503C005785F1 /* GameOverWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764C7381AA5503C005785F1 /* GameOverWindow.swift */; };
+		E764C7501AA5503C005785F1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764C73A1AA5503C005785F1 /* GameScene.swift */; };
+		E764C7511AA5503C005785F1 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764C73B1AA5503C005785F1 /* GameViewController.swift */; };
+		E764C7521AA5503C005785F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E764C73C1AA5503C005785F1 /* Images.xcassets */; };
+		E764C7541AA5503C005785F1 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764C73E1AA5503C005785F1 /* Level.swift */; };
+		E764C7551AA5503C005785F1 /* LevelOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764C73F1AA5503C005785F1 /* LevelOverScene.swift */; };
+		E764C7561AA5503C005785F1 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764C7401AA5503C005785F1 /* MainMenuScene.swift */; };
+		E764C7571AA5503C005785F1 /* PauseWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764C7411AA5503C005785F1 /* PauseWindow.swift */; };
+		E764C7591AA55084005785F1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E764C7581AA55084005785F1 /* Default-568h@2x.png */; };
+		E79A03C71AA55C7E00A01911 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E79A03C61AA55C7E00A01911 /* GameScene.sks */; };
+		E7E874281AA5723C009CEDC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E73AC16A1AA5599900E8CFB6 /* Main.storyboard */; };
+		E7E8742A1AA5748A009CEDC3 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E874291AA5748A009CEDC3 /* GameKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E7CC1C081A529AF300F279D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7CC1BE61A529AF200F279D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7CC1BED1A529AF200F279D9;
+			remoteInfo = ColorBlocks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E73AC1691AA5599900E8CFB6 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		E73AC16A1AA5599900E8CFB6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E73AC16E1AA55A1900E8CFB6 /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
+		E764C7291AA5503C005785F1 /* AlegreyaSansSC-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AlegreyaSansSC-Bold.ttf"; path = "ColorBlocks/AlegreyaSansSC-Bold.ttf"; sourceTree = SOURCE_ROOT; };
+		E764C72A1AA5503C005785F1 /* AlegreyaSansSC-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AlegreyaSansSC-Light.ttf"; path = "ColorBlocks/AlegreyaSansSC-Light.ttf"; sourceTree = SOURCE_ROOT; };
+		E764C72B1AA5503C005785F1 /* AlegreyaSansSC-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AlegreyaSansSC-Thin.ttf"; path = "ColorBlocks/AlegreyaSansSC-Thin.ttf"; sourceTree = SOURCE_ROOT; };
+		E764C72C1AA5503C005785F1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ColorBlocks/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		E764C7321AA5503C005785F1 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Button.swift; path = ColorBlocks/Button.swift; sourceTree = SOURCE_ROOT; };
+		E764C7331AA5503C005785F1 /* ColorBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorBlock.swift; path = ColorBlocks/ColorBlock.swift; sourceTree = SOURCE_ROOT; };
+		E764C7341AA5503C005785F1 /* ColorBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorBoard.swift; path = ColorBlocks/ColorBoard.swift; sourceTree = SOURCE_ROOT; };
+		E764C7361AA5503C005785F1 /* GameBreakWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameBreakWindow.swift; path = ColorBlocks/GameBreakWindow.swift; sourceTree = SOURCE_ROOT; };
+		E764C7371AA5503C005785F1 /* GameFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameFunctions.swift; path = ColorBlocks/GameFunctions.swift; sourceTree = SOURCE_ROOT; };
+		E764C7381AA5503C005785F1 /* GameOverWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameOverWindow.swift; path = ColorBlocks/GameOverWindow.swift; sourceTree = SOURCE_ROOT; };
+		E764C73A1AA5503C005785F1 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = /Users/vladimir/Desktop/Projects/ColorBlocks/ColorBlocks/GameScene.swift; sourceTree = "<absolute>"; };
+		E764C73B1AA5503C005785F1 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = ColorBlocks/GameViewController.swift; sourceTree = SOURCE_ROOT; };
+		E764C73C1AA5503C005785F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ColorBlocks/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		E764C73D1AA5503C005785F1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ColorBlocks/Info.plist; sourceTree = SOURCE_ROOT; };
+		E764C73E1AA5503C005785F1 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Level.swift; path = ColorBlocks/Level.swift; sourceTree = SOURCE_ROOT; };
+		E764C73F1AA5503C005785F1 /* LevelOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelOverScene.swift; path = ColorBlocks/LevelOverScene.swift; sourceTree = SOURCE_ROOT; };
+		E764C7401AA5503C005785F1 /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainMenuScene.swift; path = ColorBlocks/MainMenuScene.swift; sourceTree = SOURCE_ROOT; };
+		E764C7411AA5503C005785F1 /* PauseWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PauseWindow.swift; path = ColorBlocks/PauseWindow.swift; sourceTree = SOURCE_ROOT; };
+		E764C7581AA55084005785F1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E764C75A1AA550AE005785F1 /* ColorBlocksTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorBlocksTests.swift; path = ColorBlocksTests/ColorBlocksTests.swift; sourceTree = SOURCE_ROOT; };
+		E764C75C1AA550B3005785F1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ColorBlocksTests/Info.plist; sourceTree = SOURCE_ROOT; };
+		E79A03C61AA55C7E00A01911 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		E7CC1BEE1A529AF200F279D9 /* colorific.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = colorific.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7CC1C071A529AF300F279D9 /* ColorBlocksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorBlocksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7E874291AA5748A009CEDC3 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E7CC1BEB1A529AF200F279D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7E8742A1AA5748A009CEDC3 /* GameKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7CC1C041A529AF300F279D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E7CC1BE51A529AF200F279D9 = {
+			isa = PBXGroup;
+			children = (
+				E7E874291AA5748A009CEDC3 /* GameKit.framework */,
+				E764C7581AA55084005785F1 /* Default-568h@2x.png */,
+				E7CC1BF01A529AF200F279D9 /* ColorBlocks */,
+				E7CC1C0A1A529AF300F279D9 /* ColorBlocksTests */,
+				E7CC1BEF1A529AF200F279D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E7CC1BEF1A529AF200F279D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7CC1BEE1A529AF200F279D9 /* colorific.app */,
+				E7CC1C071A529AF300F279D9 /* ColorBlocksTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7CC1BF01A529AF200F279D9 /* ColorBlocks */ = {
+			isa = PBXGroup;
+			children = (
+				E764C73A1AA5503C005785F1 /* GameScene.swift */,
+				E764C7411AA5503C005785F1 /* PauseWindow.swift */,
+				E764C7401AA5503C005785F1 /* MainMenuScene.swift */,
+				E764C7381AA5503C005785F1 /* GameOverWindow.swift */,
+				E764C73F1AA5503C005785F1 /* LevelOverScene.swift */,
+				E764C7361AA5503C005785F1 /* GameBreakWindow.swift */,
+				E764C7371AA5503C005785F1 /* GameFunctions.swift */,
+				E764C7341AA5503C005785F1 /* ColorBoard.swift */,
+				E764C7331AA5503C005785F1 /* ColorBlock.swift */,
+				E764C7321AA5503C005785F1 /* Button.swift */,
+				E764C73E1AA5503C005785F1 /* Level.swift */,
+				E764C73C1AA5503C005785F1 /* Images.xcassets */,
+				E79A03C61AA55C7E00A01911 /* GameScene.sks */,
+				E73AC1691AA5599900E8CFB6 /* LaunchScreen.xib */,
+				E73AC16D1AA55A1900E8CFB6 /* Data.xcdatamodeld */,
+				E73AC16A1AA5599900E8CFB6 /* Main.storyboard */,
+				E764C72C1AA5503C005785F1 /* AppDelegate.swift */,
+				E764C73B1AA5503C005785F1 /* GameViewController.swift */,
+				E7CC1BF11A529AF200F279D9 /* Supporting Files */,
+			);
+			path = ColorBlocks;
+			sourceTree = "<group>";
+		};
+		E7CC1BF11A529AF200F279D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E764C7291AA5503C005785F1 /* AlegreyaSansSC-Bold.ttf */,
+				E764C73D1AA5503C005785F1 /* Info.plist */,
+				E764C72A1AA5503C005785F1 /* AlegreyaSansSC-Light.ttf */,
+				E764C72B1AA5503C005785F1 /* AlegreyaSansSC-Thin.ttf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7CC1C0A1A529AF300F279D9 /* ColorBlocksTests */ = {
+			isa = PBXGroup;
+			children = (
+				E764C75A1AA550AE005785F1 /* ColorBlocksTests.swift */,
+				E7CC1C0B1A529AF300F279D9 /* Supporting Files */,
+			);
+			path = ColorBlocksTests;
+			sourceTree = "<group>";
+		};
+		E7CC1C0B1A529AF300F279D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E764C75C1AA550B3005785F1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E7CC1BED1A529AF200F279D9 /* ColorBlocks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7CC1C111A529AF300F279D9 /* Build configuration list for PBXNativeTarget "ColorBlocks" */;
+			buildPhases = (
+				E7CC1BEA1A529AF200F279D9 /* Sources */,
+				E7CC1BEB1A529AF200F279D9 /* Frameworks */,
+				E7CC1BEC1A529AF200F279D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColorBlocks;
+			productName = ColorBlocks;
+			productReference = E7CC1BEE1A529AF200F279D9 /* colorific.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E7CC1C061A529AF300F279D9 /* ColorBlocksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7CC1C141A529AF300F279D9 /* Build configuration list for PBXNativeTarget "ColorBlocksTests" */;
+			buildPhases = (
+				E7CC1C031A529AF300F279D9 /* Sources */,
+				E7CC1C041A529AF300F279D9 /* Frameworks */,
+				E7CC1C051A529AF300F279D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7CC1C091A529AF300F279D9 /* PBXTargetDependency */,
+			);
+			name = ColorBlocksTests;
+			productName = ColorBlocksTests;
+			productReference = E7CC1C071A529AF300F279D9 /* ColorBlocksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E7CC1BE61A529AF200F279D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Tim;
+				TargetAttributes = {
+					E7CC1BED1A529AF200F279D9 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 2H654K823K;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
+					};
+					E7CC1C061A529AF300F279D9 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = E7CC1BED1A529AF200F279D9;
+					};
+				};
+			};
+			buildConfigurationList = E7CC1BE91A529AF200F279D9 /* Build configuration list for PBXProject "ColorBlocks" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E7CC1BE51A529AF200F279D9;
+			productRefGroup = E7CC1BEF1A529AF200F279D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E7CC1BED1A529AF200F279D9 /* ColorBlocks */,
+				E7CC1C061A529AF300F279D9 /* ColorBlocksTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E7CC1BEC1A529AF200F279D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7E874281AA5723C009CEDC3 /* Main.storyboard in Resources */,
+				E764C7441AA5503C005785F1 /* AlegreyaSansSC-Thin.ttf in Resources */,
+				E764C7591AA55084005785F1 /* Default-568h@2x.png in Resources */,
+				E764C7521AA5503C005785F1 /* Images.xcassets in Resources */,
+				E764C7421AA5503C005785F1 /* AlegreyaSansSC-Bold.ttf in Resources */,
+				E79A03C71AA55C7E00A01911 /* GameScene.sks in Resources */,
+				E73AC16B1AA5599900E8CFB6 /* LaunchScreen.xib in Resources */,
+				E764C7431AA5503C005785F1 /* AlegreyaSansSC-Light.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7CC1C051A529AF300F279D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E7CC1BEA1A529AF200F279D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E764C74D1AA5503C005785F1 /* GameFunctions.swift in Sources */,
+				E764C7511AA5503C005785F1 /* GameViewController.swift in Sources */,
+				E764C7491AA5503C005785F1 /* ColorBlock.swift in Sources */,
+				E764C7481AA5503C005785F1 /* Button.swift in Sources */,
+				E764C7451AA5503C005785F1 /* AppDelegate.swift in Sources */,
+				E73AC16F1AA55A1900E8CFB6 /* Data.xcdatamodeld in Sources */,
+				E764C74E1AA5503C005785F1 /* GameOverWindow.swift in Sources */,
+				E764C7551AA5503C005785F1 /* LevelOverScene.swift in Sources */,
+				E764C7541AA5503C005785F1 /* Level.swift in Sources */,
+				E764C74A1AA5503C005785F1 /* ColorBoard.swift in Sources */,
+				E764C7501AA5503C005785F1 /* GameScene.swift in Sources */,
+				E764C7561AA5503C005785F1 /* MainMenuScene.swift in Sources */,
+				E764C7571AA5503C005785F1 /* PauseWindow.swift in Sources */,
+				E764C74C1AA5503C005785F1 /* GameBreakWindow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7CC1C031A529AF300F279D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E73A9B401AA553A700E4A5AB /* ColorBlocksTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E7CC1C091A529AF300F279D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7CC1BED1A529AF200F279D9 /* ColorBlocks */;
+			targetProxy = E7CC1C081A529AF300F279D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E7CC1C0F1A529AF300F279D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Debug;
+		};
+		E7CC1C101A529AF300F279D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E7CC1C121A529AF300F279D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/ColorBlocks/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = colorific;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		E7CC1C131A529AF300F279D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/ColorBlocks/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = colorific;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		E7CC1C151A529AF300F279D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ColorBlocksTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = ColorBlocksTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/colorific.app/colorific";
+			};
+			name = Debug;
+		};
+		E7CC1C161A529AF300F279D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ColorBlocksTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = ColorBlocksTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/colorific.app/colorific";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E7CC1BE91A529AF200F279D9 /* Build configuration list for PBXProject "ColorBlocks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7CC1C0F1A529AF300F279D9 /* Debug */,
+				E7CC1C101A529AF300F279D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7CC1C111A529AF300F279D9 /* Build configuration list for PBXNativeTarget "ColorBlocks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7CC1C121A529AF300F279D9 /* Debug */,
+				E7CC1C131A529AF300F279D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7CC1C141A529AF300F279D9 /* Build configuration list for PBXNativeTarget "ColorBlocksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7CC1C151A529AF300F279D9 /* Debug */,
+				E7CC1C161A529AF300F279D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E73AC16D1AA55A1900E8CFB6 /* Data.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E73AC16E1AA55A1900E8CFB6 /* Data.xcdatamodel */,
+			);
+			currentVersion = E73AC16E1AA55A1900E8CFB6 /* Data.xcdatamodel */;
+			path = Data.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E7CC1BE61A529AF200F279D9 /* Project object */;
+}
