@@ -11,15 +11,10 @@ import SpriteKit
 
 class LevelOverScene: SKScene {
     
-    
     init(size: CGSize, won:Bool, currentLevel:Int) {
-        
         super.init(size: size)
-        
-        // 1
         self.backgroundColor = won ? UIColor(red: 136/255, green: 213/255, blue: 222/255, alpha: 1.0) : SKColor.whiteColor()
         
-        // 2
         var color: String =  NSUserDefaults().stringForKey("winColor")!
         var message: String = ""
         var message2 = ""
@@ -27,18 +22,18 @@ class LevelOverScene: SKScene {
         var str = ""
         var str2  = ""
         if countElements(color) > 6 {
-        str  = "TAP THE"
-        str2  = "\(color)!".uppercaseString
+            str  = "TAP THE"
+            str2  = "\(color)!".uppercaseString
         }
         else {
-        str  = "TAP THE \(color)!".uppercaseString
-        
+            str  = "TAP THE \(color)!".uppercaseString
+            
         }
         
         message = (currentLevel != 0) ? "AWESOME!" : str
         
         
-        // 3
+        // LEVEL LABEL
         let label = SKLabelNode(fontNamed: "AlegreyaSansSC-Thin")
         let label2 = SKLabelNode(fontNamed: "AlegreyaSansSC-Thin")
         label.text = message
@@ -57,7 +52,7 @@ class LevelOverScene: SKScene {
             addChild(label2)
         }
         else{
-        label.position = CGPoint(x: size.width/2, y: size.height/2 + 200)
+            label.position = CGPoint(x: size.width/2, y: size.height/2 + 200)
         }
         addChild(label)
         
@@ -76,55 +71,40 @@ class LevelOverScene: SKScene {
         nextLevelLabel.text = "level \(currentLevel + 1)"
         
         if currentLevel + 1 < 10{
-        nextLevelLabel.fontSize = 200
+            nextLevelLabel.fontSize = 200
         } else{
-        nextLevelLabel.fontSize = 175
+            nextLevelLabel.fontSize = 175
         }
         nextLevelLabel.verticalAlignmentMode = .Center
         nextLevelLabel.horizontalAlignmentMode = .Center
         
-        
-        
         nextLevel.addChild(nextLevelLabel)
         self.addChild(nextLevel)
-        
-        
         
         let revealLabel = SKAction.fadeInWithDuration(1.0)
         nextLevel.runAction(revealLabel)
         label.runAction(revealLabel)
         if str2 != "" { label2.runAction(revealLabel) }
         
-        
-        
-        
-        
-        
-        // 5
         runAction(SKAction.sequence([
             SKAction.waitForDuration(5.0),
             SKAction.runBlock() {
-                // 5
-                
                 if won{
-                let scene = ColorGameScene(size: size)
-                let reveal = SKTransition.fadeWithColor(scene.backgroundColor, duration: 0.6)
-                scene.currentLevel = currentLevel
-                self.view?.presentScene(scene, transition:reveal)
+                    let scene = ColorGameScene(size: size)
+                    let reveal = SKTransition.fadeWithColor(scene.backgroundColor, duration: 0.6)
+                    scene.currentLevel = currentLevel
+                    self.view?.presentScene(scene, transition:reveal)
                 }
                 else{
                     let scene = MainMenuScene(size: size)
                     let reveal = SKTransition.fadeWithColor(scene.backgroundColor, duration: 0.5)
                     self.view?.presentScene(scene, transition:reveal)
                 }
-                
-                
             }
             ]))
         
     }
     
-    // 6
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

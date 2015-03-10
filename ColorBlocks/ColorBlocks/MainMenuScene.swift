@@ -15,18 +15,17 @@ class MainMenuScene: SKScene {
     var background = SKSpriteNode()
     
     override func didMoveToView(view: SKView) {
-        
-        
         self.size = CGSize(width: 640, height:1136)
-        
         assignWinColor()
         
+        // BACKGROUND
         background.color = UIColor(red: 136/255, green: 213/255, blue: 222/255, alpha: 1.0)
         background.size = self.frame.size
         background.position = CGPoint(x: CGRectGetMidX(self.frame) , y:CGRectGetMidY(self.frame))
-        
         self.addChild(background)
         
+        
+        // TITLE LABEL
         let titleLabel = SKLabelNode(fontNamed: "AlegreyaSansSC-Thin")
         titleLabel.text = "colorific"
         titleLabel.fontSize = 100
@@ -39,7 +38,6 @@ class MainMenuScene: SKScene {
         addChild(titleLabel)
         
         
-
         // START BUTTON
         var startButton = Button(rectOfSize: CGSize(width: 230, height: 230), duration: 4.0)
         startButton.color = UIColor(red: 142/255, green: 186/255, blue: 77/255, alpha: 1.0)
@@ -62,11 +60,10 @@ class MainMenuScene: SKScene {
         playIcon.position.y -= 51.0
         playIcon.color = UIColor.whiteColor()
         playIcon.name = "startI"
-
+        
         
         startButton.addChild(playIcon)
         self.addChild(startButton)
-        ///////////////////////////
         
         
         // SETTINGS BUTTON
@@ -91,14 +88,12 @@ class MainMenuScene: SKScene {
         
         
         settingsButton.addChild(setIcon)
-        
         settingsButton.addChild(setLabel)
         self.addChild(settingsButton)
         
-   
         
+        // SCORE LABEL
         var scoreColor = UIColor(red: 1.0, green: 1.0, blue: 191/255, alpha: 1.0)
-        
         var highScore = NSUserDefaults().integerForKey("highscore")
         
         let highScoreLabel = SKLabelNode(fontNamed: "AlegreyaSansSC-Light")
@@ -111,7 +106,6 @@ class MainMenuScene: SKScene {
         
         highScoreLabel.position.x = CGRectGetMidX(self.frame)
         highScoreLabel.position.y = CGRectGetMaxY(self.frame) - highScoreLabel.frame.size.height - 645
-    
         self.addChild(highScoreLabel)
         
         let highScoreInd = SKLabelNode(fontNamed: "AlegreyaSansSC-Bold")
@@ -125,21 +119,14 @@ class MainMenuScene: SKScene {
         highScoreInd.fontColor = scoreColor
         self.addChild(highScoreInd)
         
-        
-        
-        
-        
-        
         var lastScore = NSUserDefaults().integerForKey("lastscore")
-        
         let lastScoreLabel = SKLabelNode(fontNamed: "AlegreyaSansSC-Light")
+        
         lastScoreLabel.text = "last score"
         lastScoreLabel.fontSize = 50
         lastScoreLabel.fontColor = SKColor.whiteColor()
         lastScoreLabel.verticalAlignmentMode = .Center
         lastScoreLabel.horizontalAlignmentMode = .Center
-        
-        
         lastScoreLabel.position.x = CGRectGetMidX(self.frame)
         lastScoreLabel.position.y = CGRectGetMaxY(self.frame) - highScoreLabel.frame.size.height - 760
         lastScoreLabel.fontColor = scoreColor
@@ -168,7 +155,6 @@ class MainMenuScene: SKScene {
         let fbIcon = SKSpriteNode(imageNamed: "fb")
         fbIcon.name = "fb"
         
-        
         facebookButton.addChild(fbIcon)
         self.addChild(facebookButton)
         
@@ -185,48 +171,36 @@ class MainMenuScene: SKScene {
         
         twitterButton.addChild(twIcon)
         self.addChild(twitterButton)
-        ///////////////////////////
-        
-        
-        
-        
     }
     
     func start(){
         runAction(SKAction.sequence([
             SKAction.waitForDuration(NSTimeInterval(0.2)),
             
-        SKAction.runBlock() {
-            let scene = LevelOverScene(size: self.frame.size, won:true, currentLevel: 0)
-            let reveal = SKTransition.fadeWithColor(scene.backgroundColor, duration: 1.1)
-            self.view?.presentScene(scene, transition:reveal)
-        }
-        ]))
+            SKAction.runBlock() {
+                let scene = LevelOverScene(size: self.frame.size, won:true, currentLevel: 0)
+                let reveal = SKTransition.fadeWithColor(scene.backgroundColor, duration: 1.1)
+                self.view?.presentScene(scene, transition:reveal)
+            }
+            ]))
     }
-
+    
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        
         for touch: AnyObject in touches {
-            
             let location: CGPoint! = touch.locationInNode(self)
-            
             let nodeAtPoint = self.nodeAtPoint(location)
-            
-            
             
             if (nodeAtPoint.name == "start") || (nodeAtPoint.name == "startL") || (nodeAtPoint.name == "startI"){
                 self.childNodeWithName("start")?.touchesBegan(touches, withEvent: event)
-               self.start()
+                self.start()
             }
             else if (nodeAtPoint.name == "fb") {
-                //nodeAtPoint.touchesBegan(touches, withEvent: event)
                 self.runAction(SKAction.sequence([SKAction.waitForDuration(0.2), SKAction.runBlock({
                     NSNotificationCenter.defaultCenter().postNotificationName("post", object: self)
                 })]))
-            
+                
             }
             else if (nodeAtPoint.name == "tw") {
-                //nodeAtPoint.touchesBegan(touches, withEvent: event)
                 self.runAction(SKAction.sequence([SKAction.waitForDuration(0.2), SKAction.runBlock({
                     NSNotificationCenter.defaultCenter().postNotificationName("tweet", object: self)
                 })]))
@@ -240,42 +214,31 @@ class MainMenuScene: SKScene {
                     NSNotificationCenter.defaultCenter().postNotificationName("gameCenter", object: self)
                     self.childNodeWithName("settings")?.touchesEnded(touches, withEvent: event)
                 })]))
-
             }
-            
         }
-        
     }
     
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
         for touch: AnyObject in touches {
-            
             let location: CGPoint! = touch.locationInNode(self)
-            
             let nodeAtPoint = self.nodeAtPoint(location)
+            
             if (nodeAtPoint.name == "start") || (nodeAtPoint.name == "startL") || (nodeAtPoint.name == "startI"){
-            self.childNodeWithName("start")?.touchesEnded(touches, withEvent: event)
+                self.childNodeWithName("start")?.touchesEnded(touches, withEvent: event)
             }
             else if (nodeAtPoint.name == "settings") || (nodeAtPoint.name == "setL") || (nodeAtPoint.name == "setI"){
                 self.childNodeWithName("settings")?.touchesEnded(touches, withEvent: event)
             }
-            
-            
-            //nodeAtPoint.touchesEnded(touches, withEvent: event)
-            
         }
     }
-
     
     func assignWinColor(){
         var color = getWinColor()
         
         NSUserDefaults().setObject(color, forKey: "winColor")
         NSUserDefaults.standardUserDefaults().synchronize()
-    
     }
-
-
+    
     override func update(currentTime: CFTimeInterval) {}
     
 }

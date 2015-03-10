@@ -13,19 +13,14 @@ class GameOverWindow: GameBreakWindow {
     var mMenuButton = Button()
     var restartButton = Button()
     
-    
     convenience init(rectOfSize size: CGSize) {
         self.init()
         self.size = size
         self.color = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.8)
         self.alpha = 0.0
-        
-        
         self.userInteractionEnabled = true
         
         
-
-
         // GAME OVER LABEL
         var gameOver = SKSpriteNode()
         gameOver.size = CGSize(width: 400, height: 400)
@@ -39,7 +34,6 @@ class GameOverWindow: GameBreakWindow {
         gameOverLabel1.fontSize = 100
         gameOverLabel1.verticalAlignmentMode = .Center
         gameOverLabel1.horizontalAlignmentMode = .Center
-        
         gameOverLabel1.position.y -= 70
         
         let gameOverLabel2 = SKLabelNode(fontNamed: "AlegreyaSansSC-Light")
@@ -73,6 +67,7 @@ class GameOverWindow: GameBreakWindow {
         mMenuButton.zPosition = 1
         self.addChild(mMenuButton)
         
+        
         // RESTART BUTTON
         restartButton = Button(rectOfSize: CGSize(width: 230, height: 230), duration: 0.0)
         var restX = CGRectGetMinX(self.frame) + restartButton.size.width/2 + 60
@@ -92,9 +87,6 @@ class GameOverWindow: GameBreakWindow {
         restartButton.zPosition = 1
         self.addChild(restartButton)
         
-
-        
-        
         // SOCIAL SHARING
         var facebookButton = Button(rectOfSize: CGSize(width: 60, height: 60), duration: 4.0)
         facebookButton.color = UIColor(red: 142/255, green: 186/255, blue: 77/255, alpha: 0.0)
@@ -105,7 +97,6 @@ class GameOverWindow: GameBreakWindow {
         
         let fbIcon = SKSpriteNode(imageNamed: "fb")
         fbIcon.name = "fb"
-        
         
         facebookButton.addChild(fbIcon)
         self.addChild(facebookButton)
@@ -119,7 +110,6 @@ class GameOverWindow: GameBreakWindow {
         
         let twIcon = SKSpriteNode(imageNamed: "tw")
         twIcon.name = "tw"
-        
         
         twitterButton.addChild(twIcon)
         self.addChild(twitterButton)
@@ -137,17 +127,10 @@ class GameOverWindow: GameBreakWindow {
         
         trophyButton.addChild(trIcon)
         self.addChild(trophyButton)
-        
-        
-        ///////////////////////////
-
-        
-        
-        
     }
+    
     func addLevelIndicator(score: Int){
         var level = score
-        
         
         var levelLabel = SKLabelNode(fontNamed: "AlegreyaSansSC-Light")
         levelLabel.text = "\(level)"
@@ -159,8 +142,6 @@ class GameOverWindow: GameBreakWindow {
         self.addChild(levelLabel)
         
         var highScore = NSUserDefaults().integerForKey("highcore")
-        
-        
         var newHighLabel = SKLabelNode(fontNamed: "AlegreyaSansSC-Light")
         newHighLabel.text = "new highscore!"
         newHighLabel.fontSize = 80
@@ -172,38 +153,25 @@ class GameOverWindow: GameBreakWindow {
         
         if level > highScore {
             self.addChild(newHighLabel)
-            
         }
-    
     }
     
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        
         for touch: AnyObject in touches {
-            
             let location: CGPoint! = touch.locationInNode(self)
-            
             let nodeAtPoint = self.nodeAtPoint(location)
             
-
-
             if (nodeAtPoint.name == "menu") || (nodeAtPoint.name == "menuL") {
                 self.childNodeWithName("menu")?.touchesBegan(touches, withEvent: event)
                 self.toMenu()
             }
                 
             else if (nodeAtPoint.name == "restart") || (nodeAtPoint.name == "restartL") {
-                
                 self.childNodeWithName("restart")?.touchesBegan(touches, withEvent: event)
-                
-                
-                
-                
-                    
                 self.restart()
             }
-
+                
             else if (nodeAtPoint.name == "fb") {
                 self.runAction(SKAction.sequence([SKAction.waitForDuration(0.2), SKAction.runBlock({
                     NSNotificationCenter.defaultCenter().postNotificationName("post", object: self)
@@ -224,17 +192,12 @@ class GameOverWindow: GameBreakWindow {
                 })]))
                 
             }
-            
-
-            
         }
     }
     
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
         for touch: AnyObject in touches {
-            
             let location: CGPoint! = touch.locationInNode(self)
-            
             let nodeAtPoint = self.nodeAtPoint(location)
             
             if (nodeAtPoint.name == "menu") || (nodeAtPoint.name == "menuL"){
@@ -242,9 +205,7 @@ class GameOverWindow: GameBreakWindow {
                 
             else if (nodeAtPoint.name == "restart") || (nodeAtPoint.name == "restartL"){
                 self.childNodeWithName("restart")?.touchesEnded(touches, withEvent: event)}
-            
-            
         }
     }
-
+    
 }

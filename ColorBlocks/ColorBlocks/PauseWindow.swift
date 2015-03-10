@@ -14,33 +14,32 @@ class PauseWindow: GameBreakWindow {
     var mMenuButton = Button()
     var restartButton = Button()
     
-    
     convenience init(rectOfSize size: CGSize) {
         self.init()
         self.size = size
         self.color = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.0)
         self.alpha = 0.0
-        
         self.userInteractionEnabled = true
         
-//        var effect = SKEffectNode()
-//
-//        var filter = CIFilter(name: "CIGaussianBlur", withInputParameters: ["inputRadius": 30.0])
-//        effect.filter = filter
-//        
-//            
-//        self.addChild(effect)
-//        
-//        effect.zPosition = 0.0
-
+        // VISUAL EFFECTS
+        /*        var effect = SKEffectNode()
+        
+                var filter = CIFilter(name: "CIGaussianBlur", withInputParameters: ["inputRadius": 30.0])
+                effect.filter = filter
+        
+        
+                self.addChild(effect)
+        
+                effect.zPosition = 0.0 */
+        
+        
+        // BACKGROUND
         var bg = SKSpriteNode()
         bg.size = self.size
         bg.color = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1.0)
         bg.alpha = 0.8
         
         self.addChild(bg)
-        
-        
         
         
         // RESUME BUTTON
@@ -50,7 +49,6 @@ class PauseWindow: GameBreakWindow {
         resumeButton.position = CGPoint(x:resX, y:resY)
         resumeButton.name = "resume"
         resumeButton.color = UIColor(red: 0.0, green: 179/255, blue: 54/255, alpha: 1.0)
-        
         
         let resumeLabel = SKLabelNode(fontNamed: "AlegreyaSansSC-Light")
         resumeLabel.text = "RESUME"
@@ -62,6 +60,7 @@ class PauseWindow: GameBreakWindow {
         resumeButton.addChild(resumeLabel)
         resumeButton.zPosition = 1
         self.addChild(resumeButton)
+        
         
         // MENU BUTTON
         mMenuButton = Button(rectOfSize: CGSize(width: 230, height: 230), duration: 0.0)
@@ -100,47 +99,37 @@ class PauseWindow: GameBreakWindow {
         restartButton.addChild(restartLabel)
         restartButton.zPosition = 1
         self.addChild(restartButton)
-        
-
-        
-        
-        }
+    }
     
-
+    
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        
         for touch: AnyObject in touches {
             
             let location: CGPoint! = touch.locationInNode(self)
-            
             let nodeAtPoint = self.nodeAtPoint(location)
-            
             
             if (nodeAtPoint.name == "resume") || (nodeAtPoint.name == "resL"){
                 self.childNodeWithName("resume")?.touchesBegan(touches, withEvent: event)
                 self.resumeGame()
             }
-            
+                
             else if (nodeAtPoint.name == "menu") || (nodeAtPoint.name == "menuL") {
                 self.childNodeWithName("menu")?.touchesBegan(touches, withEvent: event)
                 self.toMenu()
             }
-            
+                
             else if (nodeAtPoint.name == "restart") || (nodeAtPoint.name == "restartL"){
                 self.childNodeWithName("restart")?.touchesBegan(touches, withEvent: event)
                 self.restart()
             }
-            
         }
-}
+    }
     
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
         for touch: AnyObject in touches {
             
             let location: CGPoint! = touch.locationInNode(self)
-            
             let nodeAtPoint = self.nodeAtPoint(location)
-            
             
             if (nodeAtPoint.name == "resume") || (nodeAtPoint.name == "resL"){
                 self.childNodeWithName("resume")?.touchesEnded(touches, withEvent: event)
@@ -153,7 +142,6 @@ class PauseWindow: GameBreakWindow {
             else if (nodeAtPoint.name == "restart") || (nodeAtPoint.name == "restartL"){
                 self.childNodeWithName("restart")?.touchesEnded(touches, withEvent: event)
             }
-            
         }
     }
     
@@ -161,9 +149,7 @@ class PauseWindow: GameBreakWindow {
         let action = SKAction.runBlock({
             (self.parent as ColorGameScene).blockboard.paused = true
             (self.parent as ColorGameScene).pauseGame()
-        
         })
-        
         self.runAction(SKAction.sequence([SKAction.waitForDuration(0.2), action]))
     }
 }

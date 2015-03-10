@@ -11,21 +11,16 @@ import Foundation
 import SpriteKit
 
 class GameBreakWindow: SKSpriteNode {
-    
-    
     convenience init(rectOfSize size: CGSize) {
         self.init()
         self.size = size
         self.color = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.6)
         self.userInteractionEnabled = true
-
     }
     
-
     func restart(){
         runAction(SKAction.sequence([
             SKAction.waitForDuration(NSTimeInterval(0.2)),
-            
             SKAction.runBlock() {
                 let scene = LevelOverScene(size: self.frame.size, won:true, currentLevel: 0)
                 let reveal = SKTransition.fadeWithColor(scene.backgroundColor, duration: 1.1)
@@ -54,9 +49,7 @@ class GameBreakWindow: SKSpriteNode {
     func fadeOut(){
         let fade = SKAction.fadeOutWithDuration(0.2)
         self.runAction(fade)
-}
-    
-    func update(){}
+    }
 }
 
   

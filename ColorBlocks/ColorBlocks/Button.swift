@@ -38,7 +38,6 @@ class Button: SKSpriteNode {
         if green < 0.0 {red = 0.0}
         if blue < 0.0 {red = 0.0}
         
-        
         var shadeColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
         var colorizeAction = SKAction.colorizeWithColor(shadeColor, colorBlendFactor: 1.0, duration: 0.0)
         
@@ -49,8 +48,4 @@ class Button: SKSpriteNode {
         var colorizeBack = SKAction.colorizeWithColor(self.mainColor, colorBlendFactor: 1.0, duration: 0.0)
         self.runAction(colorizeBack)
     }
-
-
-
-
 }
