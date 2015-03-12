@@ -1,7 +1,7 @@
 # colorific
 my iOS game COLORIFIC
 
-Link on App Store:
+Link on App Store:<br>
 https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=975000989&mt=8
 
 Twitter:  
